@@ -6,7 +6,7 @@ export const Upload = () => {
   const [selectedFile, setSelectedFile] = useState();
   const [isFilePicked, setIsFilePicked] = useState(false);
 
-  // const url = "https://api.pinata.cloud/pinning/pinFileToIPFS";
+  const url = "https://api.pinata.cloud/pinning/pinFileToIPFS";
   const apiKey = "943a22605f49d4220dee";
   const apiSecret =
     "ee0a4a944bddade87da802b4bfbcda38d32d1054474321bf15c13793c8d32a2c";
@@ -17,21 +17,16 @@ export const Upload = () => {
   };
 
   const handleSubmission = () => {
-    const formData = new FormData();
+    const data = new FormData();
 
-    formData.append("File", selectedFile);
-
-    const url = `https://api.pinata.cloud/pinning/pinFileToIPFS`;
-
-    // //we gather a local file for this example, but any valid readStream source will work here.
-    // let data = new FormData();
-    // data.append("file", fs.createReadStream("./yourfile.png"));
+    // formData.append("File", selectedFile); // this was wrong
+    data.append("file", selectedFile, selectedFile.name);
 
     return axios
-      .post(url, formData, {
+      .post(url, data, {
         maxContentLength: "Infinity", //this is needed to prevent axios from erroring out with large files
         headers: {
-          "Content-Type": `multipart/form-data; boundary=${formData._boundary}`,
+          "Content-Type": `multipart/form-data; boundary=${data._boundary}`,
           pinata_api_key: apiKey,
           pinata_secret_api_key: apiSecret,
         },
@@ -41,29 +36,8 @@ export const Upload = () => {
         console.log("====>", response);
       })
       .catch(function (error) {
-        //handle error here
+        console.log("====>", error);
       });
-
-    // return axios
-    //   .post(url, formData, {
-    //     headers: {
-    //       // 'Content-Type': 'application/json',
-    //       Accept: "application/json",
-
-    //       "Content-Type": `multipart/form-data; boundary= ${formData._boundary}`,
-    //       pinata_api_key: apiKey,
-    //       pinata_secret_api_key: apiSecret,
-    //     },
-    //     // responseType: 'json'
-    //   })
-    //   .then(function (response) {
-    //     //handle response here
-    //     console.log("response", response.data);
-    //   })
-    //   .catch(function (error) {
-    //     //handle error here
-    //     console.log("error", error);
-    //   });
   };
 
   return (
