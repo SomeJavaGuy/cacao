@@ -1,15 +1,15 @@
 import React from "react";
 import { Col, Navbar, NavItem, NavLink, Row } from "reactstrap";
-
+import "./Header.css";
 export const Header = () => {
   return (
     <header>
       <Navbar
         fixed="top"
-        color="light"
         dark
+        color="dark"
         expand="xs"
-        className="border-bottom border-gray bg-white"
+        className="border-bottom border-gray text-light"
         style={{ height: 72 }}
       >
         <Row noGutters className="position-relative w-100 align-items-center">
