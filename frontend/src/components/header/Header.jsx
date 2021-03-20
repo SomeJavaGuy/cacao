@@ -10,7 +10,7 @@ export const Header = () => {
         dark
         color="dark"
         expand="xs"
-        className="border-bottom border-gray text-light"
+        className="text-light bg-header"
         style={{ height: 72 }}
       >
         <Row noGutters className="position-relative w-100 align-items-center">

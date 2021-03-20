@@ -7,21 +7,15 @@ import "./Home.css";
 export const Home = () => {
   return (
     <>
-      <section
-        className="hero-section ptb-5"
-        style={{
-          backgroundImage: "url(assets/audience-1.jpg)",
-          backgroundPosition: "center",
-          opacity: 0.6,
-        }}
-      >
-        <Container>
+      <section className="hero-section ptb-5">
+        <Hero />
+        {/* <Container>
           <Row>
             <Col>
-              <Hero />
+           
             </Col>
           </Row>
-        </Container>
+        </Container> */}
       </section>
 
       <section className="pb-5">
