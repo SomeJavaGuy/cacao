@@ -9,8 +9,14 @@ export const Hero = () => {
       style={{ height: 400 }}
     >
       <div className="overlay"></div>
-      <video playsInline autoPlay muted="muted" loop="loop">
-        <source src="assets/hero-video2.mp4" type="video/mp4" />
+      <video
+        playsInline
+        autoPlay
+        muted="muted"
+        loop="loop"
+        style={{ width: "100%" }}
+      >
+        <source src="assets/hero-video.mp4" type="video/mp4" />
       </video>
 
       <div className="container h-100">
