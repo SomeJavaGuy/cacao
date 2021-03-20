@@ -2,7 +2,6 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import { Header } from './components/header/Header';
 import { Home } from './components/views/home/Home';
-import { NotFound } from './components/views/not-found/NotFound';
 import { Upload } from './components/views/upload/Upload';
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
             <Upload />
           </Route>
           <Route path="*">
-            <NotFound />
+            <Home />
           </Route>
         </Switch>
       </main>

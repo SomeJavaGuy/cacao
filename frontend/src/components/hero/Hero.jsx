@@ -16,7 +16,7 @@ export const Hero = () => {
         loop="loop"
         style={{ width: "100%" }}
       >
-        <source src="assets/hero-video.mp4" type="video/mp4" />
+        <source src="hero-video.mp4" type="video/mp4" />
       </video>
 
       <div className="container h-100">

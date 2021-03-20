@@ -12,7 +12,7 @@ export const CategoryBox = () => {
             Card subtitle
           </CardSubtitle> */}
         </CardBody>
-        <img width="100%" src="/assets/placeholder-1.png" alt="category 1" />
+        <img width="100%" src="placeholder-1.png" alt="category 1" />
         <CardBody>
           <CardText>
             Some quick example text to build on the card title and make up the
