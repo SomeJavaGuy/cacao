@@ -4,7 +4,7 @@ import "./CategoryBox.css";
 
 export const CategoryBox = () => {
   return (
-    <div className="pt-2" style={{ height: 400 }}>
+    <div style={{ height: 400 }}>
       <Card>
         <CardBody>
           {/* <CardTitle tag="h5">Card title</CardTitle>
@@ -22,7 +22,6 @@ export const CategoryBox = () => {
           <CardLink href="#">Another Link</CardLink>
         </CardBody>
       </Card>
-      ;
     </div>
   );
 };

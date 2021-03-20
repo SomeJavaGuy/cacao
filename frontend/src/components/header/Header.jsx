@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Col, Navbar, NavItem, NavLink, Row } from "reactstrap";
 import "./Header.css";
 export const Header = () => {
@@ -23,15 +24,15 @@ export const Header = () => {
 
           <Col className="d-none d-lg-flex justify-content-end mr-5">
             <NavItem className="d-flex align-items-center">
-              <NavLink className="font-weight-bold" href="/">
+              <Link className="font-weight-bold" to="/">
                 Home
-              </NavLink>
+              </Link>
             </NavItem>
 
             <NavItem className="d-flex align-items-center">
-              <NavLink className="font-weight-bold" href="/upload">
+              <Link className="font-weight-bold" to="/upload">
                 Upload
-              </NavLink>
+              </Link>
             </NavItem>
           </Col>
         </Row>

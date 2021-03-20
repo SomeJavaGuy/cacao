@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <>
       <section
-        className="hero-section pt-5"
+        className="hero-section ptb-5"
         style={{
           backgroundImage: "url(assets/audience-1.jpg)",
           backgroundPosition: "center",
@@ -24,7 +24,7 @@ export const Home = () => {
         </Container>
       </section>
 
-      <section>
+      <section className="pb-5">
         <Container>
           <Row>
             <Col>
