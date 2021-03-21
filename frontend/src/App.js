@@ -23,7 +23,7 @@ function App() {
       </main>
 
       <footer>
-        some footer
+
       </footer>
     </div >
   );

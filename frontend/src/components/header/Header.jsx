@@ -24,7 +24,7 @@ export const Header = () => {
 
           <Col className="d-none d-lg-flex justify-content-end mr-5">
             <NavItem className="d-flex align-items-center">
-              <Link className="font-weight-bold" to="/">
+              <Link className="font-weight-bold mr-2" to="/">
                 Home
               </Link>
             </NavItem>
